@@ -7,14 +7,7 @@
     
     
     <style type="text/css">
-        #circle{
-            width: 200px;
-            height: 200px;
-            background-color: red;
-            border-radius: 50%;
-            float: left;
-        }
-    
+       
     
     </style>
 
@@ -26,27 +19,12 @@
         <div id="circle"></div>
  
           
-        <script type="text/javascript">
-            $("#circle").click(function(){
-
-                $(this).animate({
-                    width:"400px",
-                    height:"400px",
-                    marginLeft:"200px",
-                    marginTop:"200px",
-                },2000,function(){
-            
-                   $(this).css("background-color", "green"
-                           );
-                    }
-                  
-                 )
-            })
-   
-        
-       
+          <script type="text/javascript">
+          
+            $.get("INFO.TXT", function(data){
+                alert(data);
+            });
         </script>
-    
     
     </body>
 </html>
