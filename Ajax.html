@@ -1,35 +1,52 @@
-
-
 <html>
+<head>
+    
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <head>
-        
-        <title>AJAX</title>
- 
-        <script type="text/javascript" src="jquery.min.js"></script>
-    </head>
+    
+    
+    <style type="text/css">
+        #circle{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            float: left;
+        }
+    
+    
+    </style>
+
+        </head>
 
     <body>
         
-        <p></p>
         
-        <script type="text/javascript">
+        <div id="circle"></div>
+ 
           
-            $.ajax("info.txt")
-                .done(function(data) {
-                
-                $("p").html(data);
-                
-                })
-                .fail(function() {
-                
-                alert("Could not get data");
-                
-                });
-            
-        
-        </script>
-        
-    </body>
+        <script type="text/javascript">
+            $("#circle").click(function(){
 
+                $(this).animate({
+                    width:"400px",
+                    height:"400px",
+                    marginLeft:"200px",
+                    marginTop:"200px",
+                },2000,function(){
+            
+                   $(this).css("background-color", "green"
+                           );
+                    }
+                  
+                 )
+            })
+   
+        
+       
+        </script>
+    
+    
+    </body>
 </html>
