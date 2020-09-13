@@ -21,9 +21,18 @@
           
           <script type="text/javascript">
           
-            $.get("INFO.TXT", function(data){
-                alert(data);
-            });
+           
+              $.ajax("INFO.TXT").done(function(data){
+              
+              alert(data);
+              
+              }).fail(function(){
+              
+              alert("couldn't get data");
+              
+              });
+              
+              
         </script>
     
     </body>
